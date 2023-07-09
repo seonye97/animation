@@ -1,38 +1,83 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrap{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 40px;
+  height: 90vh;
 }
 
-.App-link {
-  color: #61dafb;
+.box1,.box2,.box3{margin-bottom: 80px;}
+
+
+.box1{
+  width: 300px;
+  height: 300px;
+  background-color: rgb(255, 173, 231);
+  animation-name: color;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+@keyframes color{
+  from{background-color: rgb(255, 173, 231)}
+  to {background-color: purple;}
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+
+.box2{
+  width: 300px;
+  height: 300px;
+  background-color: rgb(231, 198, 198);
+  position: relative;
+  animation-name: move;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes move{
+  0%{left:0px; top:0px;}
+  50%{left:300px; top:0px;}
+  100%{left:0px; top:0px;}
+}
+
+
+
+.box3{
+  width: 300px;
+  height: 300px;
+  background-color: black;
+  animation: play;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  position: relative;
+}
+@keyframes play{
+  0%{
+    background-color: black;
+
   }
-  to {
-    transform: rotate(360deg);
+  
+  25%{
+    background-color: red;
+ 
   }
+
+  50%{
+    background-color: rgb(73, 42, 165);
+    left:0px;
+    top:0px;
+  }
+
+  75%{
+    background-color: brown;
+    left:200px;
+    top:0px;
+  }
+
+  100%{
+    background-color: brown;
+    left:0px;
+    top:0px;
+  }
+
 }
